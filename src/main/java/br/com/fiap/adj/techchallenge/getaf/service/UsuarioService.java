@@ -1,9 +1,9 @@
-package br.com.fiap.api.usuarios_pettech.service;
+package br.com.fiap.adj.techchallenge.getaf.service;
 
-import br.com.fiap.api.usuarios_pettech.controller.exception.ControllerNotFoundException;
-import br.com.fiap.api.usuarios_pettech.dto.UsuarioDTO;
-import br.com.fiap.api.usuarios_pettech.entities.Usuario;
-import br.com.fiap.api.usuarios_pettech.repository.UsuarioRepository;
+import br.com.fiap.adj.techchallenge.getaf.controller.exception.ControllerNotFoundException;
+import br.com.fiap.adj.techchallenge.getaf.dto.UsuarioDTO;
+import br.com.fiap.adj.techchallenge.getaf.model.Usuario;
+import br.com.fiap.adj.techchallenge.getaf.repository.UsuarioRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

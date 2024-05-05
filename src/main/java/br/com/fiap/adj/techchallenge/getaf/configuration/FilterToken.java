@@ -1,7 +1,7 @@
-package br.com.fiap.api.usuarios_pettech.configurations;
+package br.com.fiap.adj.techchallenge.getaf.configuration;
 
-import br.com.fiap.api.usuarios_pettech.repository.UsuarioRepository;
-import br.com.fiap.api.usuarios_pettech.service.TokenService;
+import br.com.fiap.adj.techchallenge.getaf.repository.UsuarioRepository;
+import br.com.fiap.adj.techchallenge.getaf.service.TokenService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,6 +11,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+
 import java.io.IOException;
 
 @Component

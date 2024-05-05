@@ -1,9 +1,8 @@
-package br.com.fiap.api.usuarios_pettech.controller;
+package br.com.fiap.adj.techchallenge.getaf.controller;
 
-import br.com.fiap.api.usuarios_pettech.dto.UsuarioDTO;
-import br.com.fiap.api.usuarios_pettech.entities.Usuario;
-import br.com.fiap.api.usuarios_pettech.repository.UsuarioRepository;
-import br.com.fiap.api.usuarios_pettech.service.UsuarioService;
+import br.com.fiap.adj.techchallenge.getaf.dto.UsuarioDTO;
+import br.com.fiap.adj.techchallenge.getaf.repository.UsuarioRepository;
+import br.com.fiap.adj.techchallenge.getaf.service.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -14,10 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("/api/usuario")
 public class UsuarioController {
 
     private final UsuarioService usuarioService;

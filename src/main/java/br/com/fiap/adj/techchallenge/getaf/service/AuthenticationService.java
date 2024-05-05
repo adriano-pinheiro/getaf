@@ -1,6 +1,6 @@
-package br.com.fiap.api.usuarios_pettech.service;
+package br.com.fiap.adj.techchallenge.getaf.service;
 
-import br.com.fiap.api.usuarios_pettech.repository.UsuarioRepository;
+import br.com.fiap.adj.techchallenge.getaf.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

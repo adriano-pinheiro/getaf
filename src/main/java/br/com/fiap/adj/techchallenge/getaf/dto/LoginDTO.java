@@ -1,4 +1,4 @@
-package br.com.fiap.api.usuarios_pettech.dto;
+package br.com.fiap.adj.techchallenge.getaf.dto;
 
 public record LoginDTO(String login, String password) {
 }

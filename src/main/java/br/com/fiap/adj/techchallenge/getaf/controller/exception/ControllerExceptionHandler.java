@@ -1,4 +1,4 @@
-package br.com.fiap.api.usuarios_pettech.controller.exception;
+package br.com.fiap.adj.techchallenge.getaf.controller.exception;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;

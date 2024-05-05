@@ -1,6 +1,6 @@
-package br.com.fiap.api.usuarios_pettech.service;
+package br.com.fiap.adj.techchallenge.getaf.service;
 
-import br.com.fiap.api.usuarios_pettech.entities.Usuario;
+import br.com.fiap.adj.techchallenge.getaf.model.Usuario;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,6 @@ public class TokenService {
                         .toInstant(ZoneOffset.of("-03:00"))
                 ).sign(Algorithm.HMAC256("palavrasecreta"));
     }
-
 
     public String getSubject(String token) {
         return JWT.require(Algorithm.HMAC256("palavrasecreta"))

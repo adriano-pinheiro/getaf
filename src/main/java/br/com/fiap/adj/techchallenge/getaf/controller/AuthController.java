@@ -1,8 +1,8 @@
-package br.com.fiap.api.usuarios_pettech.controller;
+package br.com.fiap.adj.techchallenge.getaf.controller;
 
-import br.com.fiap.api.usuarios_pettech.dto.LoginDTO;
-import br.com.fiap.api.usuarios_pettech.entities.Usuario;
-import br.com.fiap.api.usuarios_pettech.service.TokenService;
+import br.com.fiap.adj.techchallenge.getaf.dto.LoginDTO;
+import br.com.fiap.adj.techchallenge.getaf.model.Usuario;
+import br.com.fiap.adj.techchallenge.getaf.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -20,7 +20,7 @@ public class AuthController {
     @Autowired
     private TokenService tokenService;
 
-    @PostMapping("/login")
+    @PostMapping("/api/login")
     public String login(@RequestBody LoginDTO login) {
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
                 new UsernamePasswordAuthenticationToken(login.login(),
