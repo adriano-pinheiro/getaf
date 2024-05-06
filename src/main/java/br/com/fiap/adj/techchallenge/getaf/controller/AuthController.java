@@ -20,7 +20,7 @@ public class AuthController {
     @Autowired
     private TokenService tokenService;
 
-    @PostMapping("/api/login")
+    @PostMapping("/api/v1/login")
     public String login(@RequestBody LoginDTO login) {
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
                 new UsernamePasswordAuthenticationToken(login.login(),

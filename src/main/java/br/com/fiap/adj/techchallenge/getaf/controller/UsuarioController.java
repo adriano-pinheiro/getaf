@@ -14,7 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/usuario")
+@RequestMapping("/api/v1/usuario")
 public class UsuarioController {
 
     private final UsuarioService usuarioService;
