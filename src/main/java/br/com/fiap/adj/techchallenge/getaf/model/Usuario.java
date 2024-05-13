@@ -5,33 +5,47 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name="tb_usuario")
-public class Usuario implements UserDetails {
+@Table(name="tb_usuarios")
+public class Usuario implements Serializable, UserDetails {
+
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
+
     @Column(unique=true)
     private String login;
+
     private String email;
+
     @Column(unique=true)
     private String cpf;
+
     private LocalDate dataNascimento;
+
     private String password;
+
     private String role;
 
-    public Usuario(){
+    public Usuario(){}
 
-    }
-
-    public Usuario(Long id, String nome, String login, String email, String cpf, LocalDate dataNascimento, String password) {
+    public Usuario(Long id,
+                   String nome,
+                   String login,
+                   String email,
+                   String cpf,
+                   LocalDate dataNascimento,
+                   String password) {
         this.id = id;
         this.nome = nome;
         this.login = login;
@@ -137,7 +151,6 @@ public class Usuario implements UserDetails {
                 ", email='" + email + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", dataNascimento=" + dataNascimento +
-                ", password='" + password + '\'' +
                 '}';
     }
 
