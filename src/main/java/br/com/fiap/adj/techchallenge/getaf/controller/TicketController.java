@@ -59,16 +59,6 @@ public class TicketController {
         return ResponseEntity.status(HttpStatus.OK).body(ticket.get());
     }
 
-    /*@PutMapping("/updateStatus/{id}")
-    public ResponseEntity<Object> updateStatusTicket(@PathVariable(value = "id") Long id,
-                                                    @RequestBody @Valid StatusTicket statusTicket){
-        Optional<Ticket> ticketOptional = service.updateStatusTicket(id, statusTicket);
-        if(ticketOptional.isEmpty()){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Ticket não encontrado.");
-        }
-        return ResponseEntity.status(HttpStatus.OK).body(ticketOptional.get());
-    }*/
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Object> deleteTicket(@PathVariable(value = "id") Long id) throws EntityNotFoundException {
         try {
