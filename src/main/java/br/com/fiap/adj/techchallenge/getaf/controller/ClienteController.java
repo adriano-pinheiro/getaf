@@ -4,6 +4,7 @@ import br.com.fiap.adj.techchallenge.getaf.dto.ClienteDTO;
 import br.com.fiap.adj.techchallenge.getaf.dto.UsuarioDTO;
 import br.com.fiap.adj.techchallenge.getaf.service.ClienteService;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -15,11 +16,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1/clientes")
 public class ClienteController {
 
-    private final ClienteService service;
-
-    public ClienteController(ClienteService clienteService) {
-        this.service = clienteService;
-    }
+    @Autowired
+    private ClienteService service;
 
     @GetMapping
     public ResponseEntity<Page<ClienteDTO>> findAll(

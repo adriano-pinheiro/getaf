@@ -1,8 +1,12 @@
 package br.com.fiap.adj.techchallenge.getaf.dto;
 
+import br.com.fiap.adj.techchallenge.getaf.model.Endereco;
+import jakarta.persistence.UniqueConstraint;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import org.hibernate.validator.constraints.br.CNPJ;
+
+import java.util.List;
 
 public record ClienteDTO(
         Long id,
@@ -20,16 +24,6 @@ public record ClienteDTO(
 
         String telefone,
 
-        String endereco,
-
-        String complemento,
-
-        String cep,
-
-        String bairro,
-
-        String cidade,
-
-        String uf
+        List<EnderecoDTO> enderecos
 ) {
 }
