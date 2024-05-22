@@ -45,7 +45,7 @@ public class ContratoService {
     public ContratoDTO update(Long id, ContratoDTO contratoDTO) {
         try {
             Contrato contrato =  contratoRepository.getOne(id);
-            contrato.setCliente(contratoDTO.cliente());
+            contrato.setCliente(contratoDTO.id_cliente());
             contrato.setHoras(contratoDTO.horas());
             contrato.setValor(contratoDTO.valor());
             contrato.setDtInicioVigencia(contratoDTO.dtInicioVigencia());
@@ -77,7 +77,7 @@ public class ContratoService {
     private Contrato toEntity(ContratoDTO contratoDTO) {
         return new Contrato(
                 contratoDTO.id(),
-                contratoDTO.cliente(),
+                contratoDTO.id_cliente(),
                 contratoDTO.horas(),
                 contratoDTO.valor(),
                 contratoDTO.dtInicioVigencia(),
