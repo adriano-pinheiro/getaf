@@ -27,7 +27,7 @@ public class Tarefa implements Serializable {
                    Long idTicket,
                    String nome,
                    String status,
-                   String executor,
+                   String executor
                    ) {
         this.id = id;
         this.idTicket = idTicket;
