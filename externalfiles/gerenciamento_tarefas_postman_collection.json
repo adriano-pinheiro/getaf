@@ -732,7 +732,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nome\" : \"Cliente de Teste\",\n    \"cnpj\" : \"79.464.138/0001-00\",\n    \"email\" : \"teste@teste.com\",\n    \"telefone\" : \"11988990011\",\n    \"enderecos\" : [\n        {\n            \"logradouro\" : \"Rua de Teste\",\n            \"numero\" : 123,\n            \"complemento\" : null,\n            \"cep\" : \"012222-000\",\n            \"bairro\" : \"Parque de Teste\",\n            \"cidade\" : \"Americana\",\n            \"uf\" : \"SP\"\n        }\n    ]\n}",
+							"raw": "{\n    \"nome\" : \"Cliente de Teste\",\n    \"cnpj\" : \"79.464.138/0001-00\",\n    \"email\" : \"teste@teste.com\",\n    \"telefone\" : \"11988990011\",\n    \"enderecos\" : [\n        {\n            \"logradouro\" : \"Rua de Teste\",\n            \"numero\" : 123,\n            \"complemento\" : \"Apartamento 33, bloco 5\",\n            \"cep\" : \"012222-000\",\n            \"bairro\" : \"Parque de Teste\",\n            \"cidade\" : \"Americana\",\n            \"uf\" : \"SP\"\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -752,7 +752,99 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Criar Cliente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\" : \"Cliente de Teste\",\n    \"cnpj\" : \"79.464.138/0001-00\",\n    \"email\" : \"teste@teste.com\",\n    \"telefone\" : \"11988990011\",\n    \"enderecos\" : [\n        {\n            \"logradouro\" : \"Rua de Teste\",\n            \"numero\" : 123,\n            \"complemento\" : \"Apartamento 33, bloco 5\",\n            \"cep\" : \"012222-000\",\n            \"bairro\" : \"Parque de Teste\",\n            \"cidade\" : \"Americana\",\n            \"uf\" : \"SP\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/clientes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"clientes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 18:33:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"nome\": \"Cliente de Teste\",\n    \"cnpj\": \"79.464.138/0001-00\",\n    \"email\": \"teste@teste.com\",\n    \"telefone\": \"11988990011\",\n    \"enderecos\": [\n        {\n            \"id\": 3,\n            \"logradouro\": \"Rua de Teste\",\n            \"numero\": \"123\",\n            \"complemento\": \"Apartamento 33, bloco 5\",\n            \"bairro\": \"Parque de Teste\",\n            \"cep\": \"Americana\",\n            \"cidade\": \"012222-000\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Lista de Clientes",
@@ -772,7 +864,90 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Lista de Clientes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/clientes",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 18:35:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"nome\": \"Cliente de Teste\",\n            \"cnpj\": \"79.464.138/0001-00\",\n            \"email\": \"teste@teste.com\",\n            \"telefone\": \"11988990011\",\n            \"enderecos\": [\n                {\n                    \"id\": 1,\n                    \"logradouro\": \"Rua de Teste\",\n                    \"numero\": \"123\",\n                    \"complemento\": \"Apartamento 33, bloco 5\",\n                    \"bairro\": \"Parque de Teste\",\n                    \"cep\": \"Americana\",\n                    \"cidade\": \"012222-000\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"nome\": \"Cliente de Teste\",\n            \"cnpj\": \"58.314.656/0001-69\",\n            \"email\": \"teste@teste.com\",\n            \"telefone\": \"11988990011\",\n            \"enderecos\": [\n                {\n                    \"id\": 2,\n                    \"logradouro\": \"Rua de Teste\",\n                    \"numero\": \"123\",\n                    \"complemento\": \"Apartamento 33, bloco 5\",\n                    \"bairro\": \"Parque de Teste\",\n                    \"cep\": \"Americana\",\n                    \"cidade\": \"012222-000\"\n                }\n            ]\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 2,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 2,\n    \"empty\": false\n}"
+						}
+					]
 				},
 				{
 					"name": "Pesquisa Cliente",
@@ -780,7 +955,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/clientes/3",
+							"raw": "localhost:8080/api/v1/clientes/1",
 							"host": [
 								"localhost"
 							],
@@ -789,11 +964,95 @@
 								"api",
 								"v1",
 								"clientes",
-								"3"
+								"1"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Pesquisa Cliente",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/clientes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 18:36:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nome\": \"Cliente de Teste\",\n    \"cnpj\": \"79.464.138/0001-00\",\n    \"email\": \"teste@teste.com\",\n    \"telefone\": \"11988990011\",\n    \"enderecos\": [\n        {\n            \"id\": 1,\n            \"logradouro\": \"Rua de Teste\",\n            \"numero\": \"123\",\n            \"complemento\": \"Apartamento 33, bloco 5\",\n            \"bairro\": \"Parque de Teste\",\n            \"cep\": \"Americana\",\n            \"cidade\": \"012222-000\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Atualizar Cliente",
@@ -802,7 +1061,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nome\" : \"Cliente de Teste 2\",\n    \"cnpj\" : \"88.810.328/0001-14\",\n    \"email\" : \"teste@email.com\",\n    \"telefone\" : \"11988990011\",\n    \"endereco\" : \"Rua de Teste\",\n    \"complemento\" : \"n 05 - Bairro xpto\",\n    \"cep\" : \"012222-000\",\n    \"bairro\" : \"Parque de Teste\",\n    \"cidade\" : \"Americana\",\n    \"uf\" : \"SP\"\n}",
+							"raw": "{\n    \"nome\" : \"Cliente de Atualização 00002\",\n    \"cnpj\" : \"58.314.656/0001-69\",\n    \"email\" : \"teste@teste.com\",\n    \"telefone\" : \"11988990011\",\n    \"enderecos\" : [\n        {\n            \"id\" : 1,\n            \"logradouro\" : \"Rua de Teste 00002\",\n            \"numero\" : 168,\n            \"complemento\" : \"Apartamento 44, bloco 4\",\n            \"cep\" : \"012222-000\",\n            \"bairro\" : \"Parque de Teste\",\n            \"cidade\" : \"Americana\",\n            \"uf\" : \"SP\"\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -823,7 +1082,100 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Atualizar Cliente",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\" : \"Cliente de Atualização 00002\",\n    \"cnpj\" : \"58.314.656/0001-69\",\n    \"email\" : \"teste@teste.com\",\n    \"telefone\" : \"11988990011\",\n    \"enderecos\" : [\n        {\n            \"id\" : 1,\n            \"logradouro\" : \"Rua de Teste 00002\",\n            \"numero\" : 168,\n            \"complemento\" : \"Apartamento 44, bloco 4\",\n            \"cep\" : \"012222-000\",\n            \"bairro\" : \"Parque de Teste\",\n            \"cidade\" : \"Americana\",\n            \"uf\" : \"SP\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/clientes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 18:37:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nome\": \"Cliente de Atualização 00002\",\n    \"cnpj\": \"58.314.656/0001-69\",\n    \"email\": \"teste@teste.com\",\n    \"telefone\": \"11988990011\",\n    \"enderecos\": [\n        {\n            \"id\": 1,\n            \"logradouro\": \"Rua de Teste 00002\",\n            \"numero\": \"168\",\n            \"complemento\": \"Apartamento 44, bloco 4\",\n            \"bairro\": \"Parque de Teste\",\n            \"cep\": \"Americana\",\n            \"cidade\": \"012222-000\"\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Delete Cliente",
@@ -831,7 +1183,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/api/v1/clientes/3",
+							"raw": "localhost:8080/api/v1/clientes/1",
 							"host": [
 								"localhost"
 							],
@@ -840,11 +1192,87 @@
 								"api",
 								"v1",
 								"clientes",
-								"3"
+								"1"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Delete Cliente",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/v1/clientes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 18:37:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
 				}
 			]
 		},
