@@ -791,6 +791,132 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Criar Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\" : \"Cliente de Teste\",\n    \"cnpj\" : \"26.803.754/0001-73\",\n    \"email\" : \"teste@teste.com\",\n    \"telefone\" : \"11988990011\",\n    \"enderecos\" : [\n        {\n            \"logradouro\" : \"Rua de Teste\",\n            \"numero\" : 168,\n            \"complemento\" : null,\n            \"cep\" : \"012222-000\",\n            \"bairro\" : \"Parque de Teste\",\n            \"cidade\" : \"Americana\",\n            \"uf\" : \"SP\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista de Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pesquisa Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/clientes/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\" : \"Cliente de Teste 2\",\n    \"cnpj\" : \"97.339.762/0001-59\",\n    \"email\" : \"teste@email.com\",\n    \"telefone\" : \"11988990011\",\n    \"endereco\" : \"Rua de Teste\",\n    \"complemento\" : \"n 05 - Bairro xpto\",\n    \"cep\" : \"012222-000\",\n    \"bairro\" : \"Parque de Teste\",\n    \"cidade\" : \"Americana\",\n    \"uf\" : \"SP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/clientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/clientes/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [
