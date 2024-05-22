@@ -59,21 +59,4 @@ public class UsuarioController {
         return ResponseEntity.noContent().build();
     }
 
-//    @GetMapping("/validarSenha")
-//    public ResponseEntity<Boolean> validarSenha(@RequestParam String login,
-//                                                @RequestParam String password) {
-//
-//        Optional<Usuario> optUsuario = repository.findByLogin(login);
-//        if (optUsuario.isEmpty()) {
-//            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(false);
-//        }
-//
-//        Usuario usuario = optUsuario.get();
-//        boolean valid = criptografia.matches(password, usuario.getPassword());
-//
-//        HttpStatus status = (valid) ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
-//        return ResponseEntity.status(status).body(valid);
-//
-//    }
-
 }
