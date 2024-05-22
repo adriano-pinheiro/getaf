@@ -47,7 +47,8 @@ public class TarefaService {
         Tarefa Tarefa = repository.findById(id)
                 .orElseThrow( () ->
                         new ControllerNotFoundException("Tarefa não encontrado."));
-
+        
+        Tarefa.setIdTicket(TarefaDTO.idTicket());
         Tarefa.setNome(TarefaDTO.nome());
         Tarefa.setStatus(TarefaDTO.status());
         Tarefa.setExecutor(TarefaDTO.executor());
@@ -57,6 +58,7 @@ public class TarefaService {
     public TarefaDTO toDTO(Tarefa Tarefa) {
         return new TarefaDTO(
                 Tarefa.getId(),
+                Tarefa.getIdTicket(),
                 Tarefa.getNome(),
                 Tarefa.getStatus(),
                 Tarefa.getExecutor()
@@ -66,6 +68,7 @@ public class TarefaService {
     public Tarefa toEntity(TarefaDTO TarefaDTO) {
         return new Tarefa(
                 TarefaDTO.id(),
+                TarefaDTO.idTicket(),
                 TarefaDTO.nome(),
                 TarefaDTO.status(),
                 TarefaDTO.executor()
