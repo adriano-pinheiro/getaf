@@ -25,11 +25,12 @@ public class Configurations {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and().authorizeHttpRequests()
+                .authorizeHttpRequests()
+                .requestMatchers("/h2-console/**").permitAll()
                 .anyRequest().permitAll()
-                .and().addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
-                .build();
+                .and().headers().frameOptions().sameOrigin()
+                .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and().build();
     }
 
     @Bean

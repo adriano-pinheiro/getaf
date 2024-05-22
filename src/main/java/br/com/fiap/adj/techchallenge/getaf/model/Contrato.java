@@ -1,5 +1,6 @@
 package br.com.fiap.adj.techchallenge.getaf.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -16,8 +17,7 @@ public class Contrato implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    private Cliente cliente;
+    private Long id_cliente;
 
     private int horas;
 
@@ -32,14 +32,14 @@ public class Contrato implements Serializable {
     public Contrato(){}
 
     public Contrato(Long id,
-                    Cliente cliente,
+                    Long id_cliente,
                     int horas,
                     BigDecimal valor,
                     LocalDate dtInicioVigencia,
                     LocalDate dtFimVigencia,
                     String observacao) {
         this.id = id;
-        this.cliente = cliente;
+        this.id_cliente = id_cliente;
         this.horas = horas;
         this.valor = valor;
         this.dtInicioVigencia = dtInicioVigencia;
@@ -55,12 +55,12 @@ public class Contrato implements Serializable {
         this.id = id;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public Long getCliente() {
+        return id_cliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setCliente(Long id_cliente) {
+        this.id_cliente = id_cliente;
     }
 
     public int getHoras() {
@@ -113,14 +113,14 @@ public class Contrato implements Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, cliente, horas, valor, dtInicioVigencia, dtFimVigencia, observacao);
+        return Objects.hash(id, id_cliente, horas, valor, dtInicioVigencia, dtFimVigencia, observacao);
     }
 
     @Override
     public String toString() {
         return "Contrato{" +
                 "id=" + id +
-                ", cliente=" + cliente +
+                ", cliente=" + id_cliente +
                 ", horas=" + horas +
                 ", valor=" + valor +
                 ", dtInicioVigencia=" + dtInicioVigencia +

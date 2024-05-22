@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public record ContratoDTO(
         Long id,
 
-        Cliente cliente,
+        Long id_cliente,
 
         int horas,
 
