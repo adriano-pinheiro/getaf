@@ -7,6 +7,7 @@ import br.com.fiap.adj.techchallenge.getaf.model.Cliente;
 import br.com.fiap.adj.techchallenge.getaf.model.Endereco;
 import br.com.fiap.adj.techchallenge.getaf.repository.ClienteRepository;
 import br.com.fiap.adj.techchallenge.getaf.repository.EnderecoRepository;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -55,11 +56,23 @@ public class ClienteService {
         Cliente cliente = repository.findById(id)
                 .orElseThrow( () ->
                         new ControllerNotFoundException("Cliente não encontrado."));
-
         cliente.setNome(clienteDTO.nome());
         cliente.setEmail(clienteDTO.email());
         cliente.setTelefone(clienteDTO.telefone());
         cliente.setCnpj(clienteDTO.cnpj());
+        repository.save(cliente);
+        for (EnderecoDTO enderecoDto : clienteDTO.enderecos()) {
+            Endereco endereco  = enderecoRepository.findById(enderecoDto.id())
+                    .orElseThrow( () ->
+                        new ControllerNotFoundException("Endereço não encontrado."));;
+            endereco.setLogradouro(enderecoDto.logradouro());
+            endereco.setNumero(enderecoDto.numero());
+            endereco.setBairro(enderecoDto.bairro());
+            endereco.setCidade(enderecoDto.cidade());
+            endereco.setCep(enderecoDto.cep());
+            endereco.setComplemento(enderecoDto.complemento());
+            enderecoRepository.save(endereco);
+        }
         return toDTO(cliente);
     }
 
@@ -96,6 +109,7 @@ public class ClienteService {
             endereco.setBairro(enderecoDto.bairro());
             endereco.setCidade(enderecoDto.cidade());
             endereco.setCep(enderecoDto.cep());
+            endereco.setComplemento(enderecoDto.complemento());
 
             enderecos.add(endereco);
         }
