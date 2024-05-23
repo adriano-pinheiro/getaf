@@ -85,6 +85,7 @@ public class Tarefa implements Serializable {
     public String toString() {
         return "Tarefa{" +
                 "id=" + id +
+                ", idTicket='" + idTicket + '\'' +
                 ", nome='" + nome + '\'' +
                 ", status='" + status + '\'' +
                 ", executor='" + executor + '\'' +

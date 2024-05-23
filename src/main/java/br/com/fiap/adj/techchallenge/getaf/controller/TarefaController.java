@@ -1,7 +1,6 @@
 package br.com.fiap.adj.techchallenge.getaf.controller;
 
 import br.com.fiap.adj.techchallenge.getaf.dto.TarefaDTO;
-import br.com.fiap.adj.techchallenge.getaf.dto.UsuarioDTO;
 import br.com.fiap.adj.techchallenge.getaf.service.TarefaService;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
@@ -12,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/Tarefas")
+@RequestMapping("/api/v1/tarefa")
 public class TarefaController {
 
     private final TarefaService service;
