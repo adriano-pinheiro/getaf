@@ -2,16 +2,11 @@ package br.com.fiap.adj.techchallenge.getaf.service;
 
 import br.com.fiap.adj.techchallenge.getaf.controller.exception.ControllerNotFoundException;
 import br.com.fiap.adj.techchallenge.getaf.dto.TarefaDTO;
-import br.com.fiap.adj.techchallenge.getaf.dto.UsuarioDTO;
 import br.com.fiap.adj.techchallenge.getaf.model.Tarefa;
-import br.com.fiap.adj.techchallenge.getaf.model.Usuario;
 import br.com.fiap.adj.techchallenge.getaf.repository.TarefaRepository;
-import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class TarefaService {
@@ -52,6 +47,7 @@ public class TarefaService {
         Tarefa.setNome(TarefaDTO.nome());
         Tarefa.setStatus(TarefaDTO.status());
         Tarefa.setExecutor(TarefaDTO.executor());
+        Tarefa = repository.save(Tarefa);
         return toDTO(Tarefa);
     }
 
