@@ -2060,6 +2060,1436 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Tarefas",
+			"item": [
+				{
+					"name": "tarefa_save",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    {\n\t\t\"idTicket\": \"1\",\n\t\t\"nome\": \"Tarefa 1\",\t\n\t\t\"status\": \"executando\",\n\t\t\"executor\": \"executor 1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/tarefa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tarefa"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "tarefa_save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/8.6.1"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\n    {\n\t\t\"idTicket\": \"1\",\n\t\t\"nome\": \"Tarefa 1\",\t\n\t\t\"status\": \"executando\",\n\t\t\"executor\": \"executor 1\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/tarefa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"tarefa"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 May 2024 13:54:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"idTicket\": 1,\n    \"nome\": \"Tarefa 1\",\n    \"status\": \"executando\",\n    \"executor\": \"executor 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "tarefa_findAll",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/tarefa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tarefa"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "tarefa_findAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/8.6.1"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/tarefa",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"tarefa"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 May 2024 14:11:21 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"idTicket\": 1,\n            \"nome\": \"Tarefa 1\",\n            \"status\": \"executando\",\n            \"executor\": \"executor 1\"\n        },\n        {\n            \"id\": 2,\n            \"idTicket\": 2,\n            \"nome\": \"Tarefa 2\",\n            \"status\": \"executando\",\n            \"executor\": \"executor 2\"\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 2,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 2,\n    \"empty\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "tarefa_findById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/tarefa/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tarefa",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "tarefa_findById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/8.6.1"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/tarefa/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"tarefa",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 May 2024 13:55:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"idTicket\": 1,\n    \"nome\": \"Tarefa 1\",\n    \"status\": \"executando\",\n    \"executor\": \"executor 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "tarefa_update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"id\": \"1\",\n    \"idTicket\": \"2\",\n    \"nome\": \"tarefa 1\",\n    \"status\": \"finalizado\",\n    \"executor\": \"executor teste 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/tarefa/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tarefa",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "tarefa_update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/8.6.1"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \n    \"id\": \"1\",\n    \"idTicket\": \"2\",\n    \"nome\": \"tarefa 1\",\n    \"status\": \"finalizado\",\n    \"executor\": \"executor teste 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/tarefa/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"tarefa",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 May 2024 13:55:19 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"idTicket\": 2,\n    \"nome\": \"tarefa 1\",\n    \"status\": \"finalizado\",\n    \"executor\": \"executor teste 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "tarefa_delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/tarefa/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tarefa",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "tarefa_delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/8.6.1"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/tarefa/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"tarefa",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 24 May 2024 13:56:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Contratos",
+			"item": [
+				{
+					"name": "contrato_save",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\t\t\t\n\t\t\"id_cliente\": 1,\n\t\t\"horas\": 0,\n\t\t\"valor\": 50000,\t\t\n\t\t\"dtInicioVigencia\": \"2024-05-01\",\n        \"dtFimVigencia\": \"2024-08-01\",\n\t\t\"observacao\": \"texto observacao\"\n\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/contrato",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"contrato"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "contrato_save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/8.6.1"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\t\t\t\t\n\t\t\"id_cliente\": 1,\n\t\t\"horas\": 0,\n\t\t\"valor\": 50000,\t\t\n\t\t\"dtInicioVigencia\": \"2024-05-01\",\n        \"dtFimVigencia\": \"2024-08-01\",\n\t\t\"observacao\": \"texto observacao\"\n\t}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/contrato",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"contrato"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 May 2024 15:46:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"id_cliente\": 1,\n    \"horas\": 0,\n    \"valor\": 50000,\n    \"dtInicioVigencia\": \"2024-05-01\",\n    \"dtFimVigencia\": \"2024-08-01\",\n    \"observacao\": \"texto observacao\"\n}"
+						}
+					]
+				},
+				{
+					"name": "contrato_findAll",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/contrato",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"contrato"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "contrato_findAll",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/8.6.1"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/contrato",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"contrato"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 May 2024 15:47:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"id_cliente\": 1,\n            \"horas\": 0,\n            \"valor\": 50000,\n            \"dtInicioVigencia\": \"2024-05-01\",\n            \"dtFimVigencia\": \"2024-08-01\",\n            \"observacao\": \"texto observacao\"\n        },\n        {\n            \"id\": 2,\n            \"id_cliente\": 2,\n            \"horas\": 0,\n            \"valor\": 30000,\n            \"dtInicioVigencia\": \"2024-05-01\",\n            \"dtFimVigencia\": \"2024-08-01\",\n            \"observacao\": \"texto observacao\"\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"last\": true,\n    \"totalElements\": 2,\n    \"totalPages\": 1,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"first\": true,\n    \"numberOfElements\": 2,\n    \"empty\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "contrato_findById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/contrato/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"contrato",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "contrato_findById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/8.6.1"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/contrato/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"contrato",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 May 2024 15:47:25 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"id_cliente\": 1,\n    \"horas\": 0,\n    \"valor\": 50000,\n    \"dtInicioVigencia\": \"2024-05-01\",\n    \"dtFimVigencia\": \"2024-08-01\",\n    \"observacao\": \"texto observacao\"\n}"
+						}
+					]
+				},
+				{
+					"name": "contrato_update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\t\t\t\n\t\t\"id_cliente\": 2,\n\t\t\"horas\": 0,\n\t\t\"valor\": 50000,\t\t\n\t\t\"dtInicioVigencia\": \"2024-05-01\",\n\t\t\"dtFimVigencia\": \"2025-05-01\",\n\t\t\"observacao\": \"texto observacao\"\n\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/contrato/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"contrato",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "contrato_update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/8.6.1"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\t\t\t\t\n\t\t\"id_cliente\": 2,\n\t\t\"horas\": 0,\n\t\t\"valor\": 50000,\t\t\n\t\t\"dtInicioVigencia\": \"2024-05-01\",\n\t\t\"dtFimVigencia\": \"2025-05-01\",\n\t\t\"observacao\": \"texto observacao\"\n\t}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/contrato/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"contrato",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 May 2024 15:47:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"id_cliente\": 2,\n    \"horas\": 0,\n    \"valor\": 50000,\n    \"dtInicioVigencia\": \"2024-05-01\",\n    \"dtFimVigencia\": \"2025-05-01\",\n    \"observacao\": \"texto observacao\"\n}"
+						}
+					]
+				},
+				{
+					"name": "contrato_delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/contrato/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"contrato",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "contrato_delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/8.6.1"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/contrato/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"contrato",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 May 2024 15:48:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
 		}
 	],
 	"event": [
@@ -2084,12 +3514,8 @@
 	],
 	"variable": [
 		{
-			"key": "id",
-			"value": "1"
-		},
-		{
-			"key": "base_url",
-			"value": "https://postman-rest-api-learner.glitch.me/"
+			"key": " _.baseURL ",
+			"value": "localhost:8080/api/v1/"
 		}
 	]
 }
