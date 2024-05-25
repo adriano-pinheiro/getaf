@@ -1441,8 +1441,11 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"packages": {},
-								"type": "text/javascript"
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1460,6 +1463,18 @@
 								"api",
 								"v1",
 								"tickets"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"disabled": true
+								}
 							]
 						},
 						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
@@ -1522,7 +1537,7 @@
 								},
 								{
 									"key": "X-Frame-Options",
-									"value": "DENY"
+									"value": "SAMEORIGIN"
 								},
 								{
 									"key": "Content-Type",
@@ -1534,7 +1549,7 @@
 								},
 								{
 									"key": "Date",
-									"value": "Tue, 21 May 2024 23:36:18 GMT"
+									"value": "Sat, 25 May 2024 16:31:24 GMT"
 								},
 								{
 									"key": "Keep-Alive",
@@ -1546,7 +1561,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Cadastrar agência bancária SICREDI\",\n        \"descricao\": \"Cadastrar agência bancária SICREDI, Banco: 948-SICREDI, Agência:  0423, CNPJ: 04.181.521/0006-60\",\n        \"prioridade\": \"ALTA\",\n        \"status\": \"ABERTO\",\n        \"idCliente\": 1234,\n        \"horasOrcadas\": null\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"Cadastrar agência bancária SICREDI\",\n        \"descricao\": \"Cadastrar agência bancária SICREDI, Banco: 123-SICREDI, Agência:  0123, CNPJ: 01.234.567/0001-01\",\n        \"prioridade\": \"ALTA\",\n        \"status\": \"ABERTO\",\n        \"idCliente\": 1234,\n        \"horasOrcadas\": null\n    }\n]"
+							"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"nome\": \"Cadastrar agência bancária SICREDI\",\n            \"descricao\": \"Cadastrar agência bancária SICREDI, Banco: 123-SICREDI, Agência:  0123, CNPJ: 01.234.567/0001-01\",\n            \"prioridade\": \"ALTA\",\n            \"status\": \"ABERTO\",\n            \"idCliente\": 1234,\n            \"horasOrcadas\": null\n        },\n        {\n            \"id\": 2,\n            \"nome\": \"Cadastrar agência bancária SICREDI\",\n            \"descricao\": \"Cadastrar agência bancária SICREDI, Banco: 123-SICREDI, Agência:  0123, CNPJ: 01.234.567/0001-01\",\n            \"prioridade\": \"ALTA\",\n            \"status\": \"ABERTO\",\n            \"idCliente\": 1234,\n            \"horasOrcadas\": null\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": false,\n            \"sorted\": true,\n            \"unsorted\": false\n        },\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"totalPages\": 1,\n    \"totalElements\": 2,\n    \"last\": true,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": false,\n        \"sorted\": true,\n        \"unsorted\": false\n    },\n    \"numberOfElements\": 2,\n    \"first\": true,\n    \"empty\": false\n}"
 						}
 					]
 				},
